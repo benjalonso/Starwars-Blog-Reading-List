@@ -66,6 +66,12 @@ p{
     margin-right: 10px;
 }
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> b36eb71926c6c2591009499870504d12fd9f8d0d
 .logoNavBar {
     width: 15rem;
     height: 8rem;
@@ -88,4 +94,20 @@ p{
     color: white;
     text-decoration: none;
 }
+<<<<<<< HEAD
 
+=======
+/* Sección componente HOME */
+.home {
+    background: gray;
+    
+}
+.carouselContainer{
+    width: 100%;
+    background-image: url("https://fondosmil.com/fondo/5450.jpg");
+
+}
+.carouselContent{
+    width: 900px;
+}
+>>>>>>> b36eb71926c6c2591009499870504d12fd9f8d0d
