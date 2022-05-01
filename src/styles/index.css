@@ -1,24 +1,23 @@
-#bodycard:hover{
-    color: grey;
+
+.logoNavBar {
+    width: 15rem;
+    height: 8rem;
+    text-align: center;
 }
 
-#bodycard {
-background: repeating-linear-gradient(
-           -45deg,
-           #2c2727 5px,
-           #2c2727 10px,
-          #444242 10px,
-          #444242 15px
-        );
-color: #b4b4b4;
+.navBar1 {
+    background-image: url("https://cdn.pixabay.com/photo/2015/09/29/15/12/stars-964022_960_720.png");
+    background-size: cover;
+
 }
 
-#bodytext {
-    color: #848484;
+.navBar2 {
+    background-image: url("https://cdn.pixabay.com/photo/2015/09/29/15/12/stars-964022_960_720.png");
+    background-size: cover;
+
+    border: 1px white solid;
 }
-body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+.linkToView{
+    color: white;
+    text-decoration: none;
 }
-/* 
-    General Styles
-*/
