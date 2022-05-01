@@ -3,9 +3,10 @@ import React, { Component } from "react";
 export const Footer = () => (
   <div className="footer mt-auto  text-center p-5">
     <p>FOLLOW STAR WARS:</p>
-    <ul className="social-links d-flex justify-content-center">
-      <li>
+    <div className="social-links d-flex justify-content-center">
+      <div>
         <a
+          className="facebook"
           href="https://www.facebook.com/StarWars"
           target="_blank"
           rel="noopener noreferrer"
@@ -13,57 +14,81 @@ export const Footer = () => (
           title="facebook"
         >
           {" "}
-          <i class="fab fa-facebook"></i>
+          <i className="fab fa-facebook"></i>
         </a>
-      </li>
-      
-      <li>
+      </div>
+
+      <div>
         <a
-          classname="instagram"
+          className="instagram "
           href="https://www.instagram.com/starwars/"
           target="_blank"
           rel="noopener noreferrer"
           data-cto="social"
           title="instagram"
         >
-        <i class="fab fa-instagram"></i>
+          {" "}
+          <i className="fab fa-instagram"></i>
         </a>
-      </li>
-      <li>
+      </div>
+      <div>
         <a
-          classname="twitter"
+          className="twitter"
           href="https://twitter.com/starwars"
           target="_blank"
           rel="noopener noreferrer"
           data-cto="social"
           title="twitter"
         >
-          <i class="fab fa-twitter"></i>
+          {" "}
+          <i className="fab fa-twitter"></i>
         </a>
-      </li>
-      <li>
+      </div>
+      <div>
         <a
-          classname="youtube"
+          className="youtube"
           href="https://www.youtube.com/user/starwars"
           target="_blank"
           rel="noopener noreferrer"
           data-cto="social"
           title="youtube"
         >
-        <i class="fab fa-youtube"></i>
+          {" "}
+          <i className="fab fa-youtube"></i>
         </a>
-      </li>
-    </ul>
-    <span classname="sw-kids-container">
-      <a
-        classname="sw-kids"
-        href="https://starwarskids.com/"
-        target="_blank"
-        title="Star Wars Kids"
-        data-cto="swkids"
-      >
-    
-      </a>
-    </span>
+      </div>
+    </div>
+    <div className="container-1">
+      <div>
+        <a
+          className="benja"
+          href="https://github.com/benjalonso"
+          title="benjamin"
+        >
+          {" "}
+          <i className="fa-brands fa-github"></i>
+        </a>
+      </div>
+      <div>
+        <a
+          className="anye"
+          href="https://github.com/AnyelinaParedes?tab=repositories"
+          title="anye"
+        >
+          {" "}
+          <i className="fa-brands fa-github"></i>
+        </a>
+      </div>
+      <div>
+        <a
+          className="Manuel"
+          href="https://github.com/Attackama-Bwoy"
+          title="manuel"
+        >
+          {" "}
+          <i className="fa-brands fa-github"></i>
+        </a>
+      </div>
+    </div>
   </div>
 );
