@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
-
+import { Context } from "./store/appContext";
 import { Home } from "./views/home";
 import { Characters } from "./views/characters";
 import { Planets } from "./views/planets";
