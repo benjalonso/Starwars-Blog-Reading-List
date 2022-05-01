@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-/* 
-    General Styles
-*/
+
 .footer{
     display: block;
     position: relative;
@@ -70,7 +67,7 @@ p{
 }
 
 
-=======
+
 
 .logoNavBar {
     width: 15rem;
@@ -94,7 +91,6 @@ p{
     color: white;
     text-decoration: none;
 }
-<<<<<<< HEAD
 /* Sección componente HOME */
 .home {
     background: gray;
@@ -108,6 +104,3 @@ p{
 .carouselContent{
     width: 900px;
 }
-=======
->>>>>>> 39cd8737c5e0ebf6401a8e2c3c356ce124c44c97
->>>>>>> d6d572ecafb8924e04a02d7a386cd2a820bbc25f
