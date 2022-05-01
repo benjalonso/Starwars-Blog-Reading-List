@@ -1,3 +1,28 @@
 /* 
     General Styles
 */
+.footer{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    clear: both;
+    margin: auto 0;
+    letter-spacing: 0.2px;
+    background-color: #0a0a0a;
+    background-image: url(https://static-mh.content.disney.io/starwars/assets/footer/vader_2-86e8fdb4e26d.jpg);
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+p{
+  
+    color: rgb(229, 229, 238);
+}
+
+footer #utility .social-links {
+    text-align: center;
+    margin-top: 30px;
+}
+
+
