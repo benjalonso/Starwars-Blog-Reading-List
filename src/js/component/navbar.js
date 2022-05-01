@@ -11,7 +11,7 @@ export const Navbar = () => {
             <Link className="col-10 text-center" to="/">
               <img
                 className="logoNavBar"
-                src="http://assets.stickpng.com/images/602175e40ad3230004b93c20.png"
+                src="https://logodownload.org/wp-content/uploads/2015/12/star-wars-logo-3-1.png"
               />
             </Link>
             <div
