@@ -17,4 +17,7 @@
 
     border: 1px white solid;
 }
-
+.linkToView{
+    color: white;
+    text-decoration: none;
+}
