@@ -5,13 +5,14 @@ export const Navbar = () => {
   return (
     <>
       <nav class="navBar1 navbar navbar-expand-lg navbar-light bg-light ">
-        <div class="container-fluid row">
-          <Link className="col-6 " to="/"  >
-          <img className="logoNavBar" src="http://assets.stickpng.com/images/602175e40ad3230004b93c20.png"/>
+        <div class="container-fluid ">
+          <div className="col-1"></div>
+          <Link className="col-10 text-center" to="/"  >
+            <img className="logoNavBar" src="http://assets.stickpng.com/images/602175e40ad3230004b93c20.png"/>
           </Link>
-          <div className="collapse navbar-collapse col-6 " id="navbarSupportedContent">
+          <div className="collapse navbar-collapse col-1 " id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item dropdown">
+              <li className="nav-item btn-group dropstart">
                 <a
                   className="nav-link dropdown-toggle btn-danger"
                   href="#"
