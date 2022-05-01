@@ -1,3 +1,28 @@
-/* 
-    General Styles
-*/
+.logoNavBar {
+    width: 15rem;
+    height: 8rem;
+    text-align: center;
+}
+
+.navBar1 {
+    background-image: url("https://cdn.pixabay.com/photo/2015/09/29/15/12/stars-964022_960_720.png");
+    background-size: cover;
+
+}
+
+.navBar2 {
+    background-image: url("https://cdn.pixabay.com/photo/2015/09/29/15/12/stars-964022_960_720.png");
+    background-size: cover;
+
+    border: 1px white solid;
+}
+
+.navCharacters {
+    border: 1px white solid;
+
+}
+
+.linkToView {
+    color: white;
+    text-decoration: none;
+}
