@@ -21,3 +21,16 @@
     color: white;
     text-decoration: none;
 }
+/* Sección componente HOME */
+.home {
+    background: gray;
+    
+}
+.carouselContainer{
+    width: 100%;
+    background-image: url("https://fondosmil.com/fondo/5450.jpg");
+
+}
+.carouselContent{
+    width: 900px;
+}
