@@ -1,3 +1,4 @@
+
 .logoNavBar {
     width: 15rem;
     height: 8rem;
@@ -17,12 +18,3 @@
     border: 1px white solid;
 }
 
-.navCharacters {
-    border: 1px white solid;
-
-}
-
-.linkToView {
-    color: white;
-    text-decoration: none;
-}
