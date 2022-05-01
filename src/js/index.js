@@ -7,7 +7,6 @@ import "../styles/index.css";
 
 //import your own components
 import Layout from "./layout";
-import FormatoInfo from "./FormatoInfo"
 
 //render your react application
-ReactDOM.render(<FormatoInfo />, document.querySelector("#app"));
+ReactDOM.render(<Layout />, document.querySelector("#app"));
