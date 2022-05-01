@@ -1,24 +1,3 @@
-#bodycard:hover{
-    color: grey;
-}
-
-#bodycard {
-background: repeating-linear-gradient(
-           -45deg,
-           #2c2727 5px,
-           #2c2727 10px,
-          #444242 10px,
-          #444242 15px
-        );
-color: #b4b4b4;
-}
-
-#bodytext {
-    color: #848484;
-}
-body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
 /* 
     General Styles
 */
