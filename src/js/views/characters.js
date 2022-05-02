@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useContext } from "react";
 import FormatoInfo from "../FormatoInfo";
 import "../../styles/characters.css";
@@ -38,3 +39,4 @@ export const Characters = () => {
 	);
 	
 };
+
