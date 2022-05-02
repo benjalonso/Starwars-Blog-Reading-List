@@ -8,8 +8,7 @@ export const Planets = props => {
 	const getData = (urlFetch) => {
 		fetch(urlFetch)
 			.then((response) => response.json())
-			.then((data) => console.log(data));
-			
+			.then((data) => console.log(data));		
 	};
 	useEffect(() => {
 		getData("https://www.swapi.tech/api/planets/");
