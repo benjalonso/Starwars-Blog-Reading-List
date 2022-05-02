@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import FormatoInfo from "../FormatoInfo";
 import "../../styles/characters.css";
-import { Pagination } from "../component/Pagination";
+// import { Pagination } from "../component/Pagination";
 export const Characters = () => {
 
 	const [characters, setCharacters] = useState([]);
