@@ -1,17 +1,33 @@
 import React, { useState, useEffect, useContext } from "react";
-import { Link } from "react-router-dom";
 import FormatoInfo from "../FormatoInfo";
-import { Context } from "../store/appContext";
-
 import "../../styles/characters.css";
-
+import { Pagination } from "../component/Pagination";
 export const Characters = () => {
-	const { store, actions } = useContext(Context);
 
+	const [characters, setCharacters] = useState([]);
+	const [info, setInfo] = useState({});
+
+	const initialUrl = "https://www.swapi.tech/api/people"
+
+	const fetchCharacters = (initialUrl) =>{
+		fetch (initialUrl)
+		.then (response => response.json())
+		.then (data => {
+			setCharacters(data.results);
+			setInfo(data.info);
+		})
+		.catch (error => console.log(error))
+	}
+
+	useEffect(() => {
+	  fetchCharacters(initialUrl);
+	}, [])
+	
 	return (
-		
-		<div className="container">
-			<FormatoInfo name="Hola" info="quehacecmasksak" img="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/1280px-Star_Wars_Logo.svg.png" />
-		</div>
+	<div>
+		<Pagination prev={info.previus} next={info.next}/>
+		<FormatoInfo characters={characters} img={"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/1280px-Star_Wars_Logo.svg.png"} />
+		<Pagination />
+	</div>
 	);
 };
