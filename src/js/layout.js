@@ -24,21 +24,21 @@ const Layout = () => {
 				<ScrollToTop>
 					<Navbar />
 					<Switch>
-						<Route exact path="/">
-							<Home />
-						</Route>
-						<Route exact path="/characters">
-							<Characters />
-						</Route>
-						<Route exact path="/planets">
-							<Planets />
-						</Route>
-						<Router exact path="/vehicles">
-							<Vehicles />
-						</Router>
-						<Route>
-							<h1>Error 404!</h1>
-						</Route>
+							<Route exact path="/">
+								<Home />
+							</Route>
+							<Route exact path="/characters">
+								<Characters />
+							</Route>
+							<Route exact path="/planets">
+								<Planets />
+							</Route>
+							<Router exact path="/vehicles">
+								<Vehicles />
+							</Router>
+							<Route>
+								<h1>Error 404!</h1>
+							</Route>
 					</Switch>
 					<Footer />
 				</ScrollToTop>
