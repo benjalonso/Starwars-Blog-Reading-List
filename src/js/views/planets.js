@@ -29,8 +29,8 @@ export const Planets = (props) => {
   return (
     <div className="container">
       {
-		  planet.results?.length > 0 && 
-		  planet.results.map((planets) => {
+		  planet.result?.length > 0 && 
+		  planet.result.map((planets) => {
 			  return (
 <div className="">
         <div key={planets.name} className="card col-sm-12 col-md-6 col-lg-3 bg-dark bg-gradient rounded text-light">
