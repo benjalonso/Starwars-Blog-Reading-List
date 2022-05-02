@@ -1,4 +1,5 @@
 
+
 import React from "react";
 const FormatoInfo = ({characters=[], img, name, info}) => {
     return (
@@ -17,6 +18,7 @@ const FormatoInfo = ({characters=[], img, name, info}) => {
             ))
         }
         
+
     </div>
     )
 }

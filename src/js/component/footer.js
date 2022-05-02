@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 export const Footer = () => (
-  <div className="footer mt-auto text-center p-5 fixed-bottom">
+  <div className="footer mt-auto text-center p-5 ">
     <p>FOLLOW STAR WARS:</p>
     <div className="social-links d-flex justify-content-center">
       <div>

@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 import FormatoInfo from "../FormatoInfo";
 
+
 export const Planets = props => {
 	const [characters, setCharacters] = useState([]);
 
@@ -26,5 +27,6 @@ export const Planets = props => {
 	
 	);
 };
+
 
 
