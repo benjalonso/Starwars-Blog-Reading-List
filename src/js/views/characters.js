@@ -1,7 +1,7 @@
 
 
 import React, { useState, useEffect, useContext } from "react";
-import FormatoInfo from "../FormatoInfo";
+// import FormatoInfo from "../FormatoCardPlanet";
 import "../../styles/characters.css";
 // import { Pagination } from "../component/Pagination";
 export const Characters = () => {
