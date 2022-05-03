@@ -30,7 +30,7 @@ export const Vehicles = props => {
 	return (
 	<div>
 		{/* <Pagination prev={info.previus} next={info.next}/> */}
-		<FormatoInfo characters={characters} img={"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/1280px-Star_Wars_Logo.svg.png"} />
+		<FormatoInfo characters={characters} img={"https://i.blogs.es/e8942b/millennium-falcon/450_1000.jpg"} />
 		{/* <Pagination /> */}
 	</div>
 	);
