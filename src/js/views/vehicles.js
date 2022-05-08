@@ -1,40 +1,52 @@
 import React, { useState, useEffect, useContext } from "react";
-import FormatoInfo from "../FormatoInfo";
+import { Link, useParams } from "react-router-dom";
+import { Context } from "../store/appContext";
+import FormatoCardVehicles from "../FormatoCardVehicles";
 
-export const Vehicles = props => {
-	const [characters, setCharacters] = useState([]);
+export const Vehicles = (props) => {
+  const [vehicles, setVehicles] = useState({});
 
-	const initialUrl = "https://www.swapi.tech/api/vehicles"
-	
-	const fetchCharacters = (initialUrl) =>{
-		fetch (initialUrl)
-		.then (response => response.json())
-		.then (data => setCharacters(data.results))
-		.catch (error => console.log(error))
-	}
+  const fetchVehicles = () => {
+    fetch("https://www.swapi.tech/api/vehicles/")
+      .then((response) => response.json())
+      .then((data) => {
+        return data;
+      })
+      .then(async (data) => {
+        data.results.forEach(async (vehicle, index) => {
+          console.log(vehicle.url);
+          const { url } = vehicle;
+          
+            const response = await fetch(url);
+            const info = await response.json();
+            data.results[index].info = info;
+            setVehicles(data);
+         
+        });
+      })
+      .catch((error) => console.log("Error en la solicitud de datos"));
+  };
+  useEffect(() => {
+    fetchVehicles();
+  }, []);
 
-		/* .then (data => {
-			const {results} = data;
-			results.forEach(async(characters, index) => {
-				const resp = await fetch (characters.url);
-				const info = await resp.jason();
-				data.results[index] = info;
-				console.log(info)
-			});
-		}) */
-	
-	useEffect(() => {
-	  fetchCharacters(initialUrl);
-	}, [])
-	
-	return (
-	<div>
-		{/* <Pagination prev={info.previus} next={info.next}/> */}
-		<FormatoInfo characters={characters} img={"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/1280px-Star_Wars_Logo.svg.png"} />
-		{/* <Pagination /> */}
-	</div>
-	);
+  return (
+    <>
+      {vehicles.results?.length > 0 &&
+        vehicles.results.map((vehicle, index) => {
+          return (
+            <FormatoCardVehicles
+            key={index}
+              name={vehicle.name}
+              index={index}
+              info={vehicle?.info?.result?.properties}
+              img={
+                "https://i.blogs.es/e8942b/millennium-falcon/450_1000.jpg"
+              }
+            />
+          );
+        })}
+    </>
+  );
 };
-
-
 

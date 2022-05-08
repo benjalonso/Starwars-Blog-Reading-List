@@ -1,7 +1,7 @@
 
 
 import React, { useState, useEffect, useContext } from "react";
-import FormatoInfo from "../FormatoInfo";
+// import FormatoInfo from "../FormatoCardPlanet";
 import "../../styles/characters.css";
 // import { Pagination } from "../component/Pagination";
 export const Characters = () => {
@@ -34,7 +34,7 @@ export const Characters = () => {
 	return (
 	<div>
 		{/* <Pagination prev={info.previus} next={info.next}/> */}
-		<FormatoInfo characters={characters} img={"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/1280px-Star_Wars_Logo.svg.png"} />
+		<FormatoInfo characters={characters} img={"https://p4.wallpaperbetter.com/wallpaper/81/410/454/star-wars-r2d2-video-games-star-wars-hd-art-wallpaper-preview.jpg"} />
 		{/* <Pagination /> */}
 	</div>
 	);
