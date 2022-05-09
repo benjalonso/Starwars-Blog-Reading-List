@@ -63,8 +63,6 @@ p{
 }
 
 
-
-
 .logoNavBar {
     width: 15rem;
     height: 8rem;
@@ -85,6 +83,9 @@ p{
     color: white;
     text-decoration: none;
 }
+
+
+
 /* Sección componente HOME */
 .home {
     background: gray;
@@ -98,3 +99,4 @@ p{
 .carouselContent{
     width: 900px;
 }
+
