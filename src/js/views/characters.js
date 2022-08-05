@@ -1,42 +1,39 @@
-
-
 import React, { useState, useEffect, useContext } from "react";
-// import FormatoInfo from "../FormatoCardPlanet";
+import FormatoCardCharacters from "../FormatoCardCharacters";
 import "../../styles/characters.css";
+import { Context } from "../store/appContext";
+
 // import { Pagination } from "../component/Pagination";
 export const Characters = () => {
 
 	const [characters, setCharacters] = useState([]);
+	const { store, actions } = useContext(Context);
 
-	const initialUrl = "https://www.swapi.tech/api/people"
-	
-	const fetchCharacters = (initialUrl) =>{
-		fetch (initialUrl)
-		.then (response => response.json())
-		.then (data => setCharacters(data.results))
-		.catch (error => console.log(error))
-	}
+	actions.fetchCharacters()
 
-		/* .then (data => {
-			const {results} = data;
-			results.forEach(async(characters, index) => {
-				const resp = await fetch (characters.url);
-				const info = await resp.jason();
-				data.results[index] = info;
-				console.log(info)
-			});
-		}) */
-	
-	useEffect(() => {
-	  fetchCharacters(initialUrl);
-	}, [])
+  useEffect(() => {
+    actions.fetchCharacters();
+  }, []);
 	
 	return (
-	<div>
-		{/* <Pagination prev={info.previus} next={info.next}/> */}
-		<FormatoInfo characters={characters} img={"https://p4.wallpaperbetter.com/wallpaper/81/410/454/star-wars-r2d2-video-games-star-wars-hd-art-wallpaper-preview.jpg"} />
-		{/* <Pagination /> */}
-	</div>
+<>
+      {characters.results?.length > 0 &&
+        characters.results.map((character, index) => {
+          return (
+            <FormatoCardCharacters
+            key={index}
+              name={character.name}
+              index={index}
+              info={character?.info?.result?.properties}
+			  favorite={store.objectSw}
+              img={
+                "https://p4.wallpaperbetter.com/wallpaper/81/410/454/star-wars-r2d2-video-games-star-wars-hd-art-wallpaper-preview.jpg"
+              }
+            />
+          );
+        })}
+    </>
+
 	);
 	
 };

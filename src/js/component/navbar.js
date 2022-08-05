@@ -1,17 +1,20 @@
-import React from "react";
+import React, {useContext} from "react";
 import { Link } from "react-router-dom";
+import { Context } from "../store/appContext";
 
 export const Navbar = () => {
+  const { store, actions } = useContext(Context);
+
   return (
     <>
       <div className="sticky-top">
-        <nav class="navBar1 navbar navbar-expand-lg navbar-light bg-light ">
-          <div class="container-fluid ">
+        <nav className="navBar1 navbar navbar-expand-lg navbar-light bg-light ">
+          <div className="container-fluid ">
             <div className="col-1"></div>
             <Link className="col-10 text-center" to="/">
               <img
                 className="logoNavBar"
-                src="http://assets.stickpng.com/images/602175e40ad3230004b93c20.png"
+                src="https://logodownload.org/wp-content/uploads/2015/12/star-wars-logo-3-1.png"
               />
             </Link>
             <div
@@ -21,7 +24,7 @@ export const Navbar = () => {
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item btn-group dropstart">
                   <a
-                    className="nav-link dropdown-toggle btn-danger"
+                    className="nav-link dropdown-toggle btn-warning"
                     href="#"
                     id="navbarDropdown"
                     role="button"
@@ -29,29 +32,19 @@ export const Navbar = () => {
                     aria-expanded="false"
                   >
                     Dropdown
+                    <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                      0
+                    </span>
+                    <span class="visually-hidden">unread messages</span>
                   </a>
                   <ul
                     className="dropdown-menu"
                     aria-labelledby="navbarDropdown"
                   >
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        Action
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        Another action
-                      </a>
-                    </li>
-                    <li>
-                      <hr className="dropdown-divider" />
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        Something else here
-                      </a>
-                    </li>
+                    {
+            store.favorite.map((name, index) => (
+              <li key={index}  deleteFromCart={actions.deleteFromCart} name={name} />
+            ))}
                   </ul>
                 </li>
               </ul>

@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
-import FormatoCardPlanet from "../FormatoCardPlanet";
+import FormatoCardPlanet from "../FormatoCardPlanets";
 
 export const Planets = (props) => {
-  const [Planets, setPlanets] = useState({});
+  const [planets, setPlanets] = useState({});
 
   const fetchPlanets = () => {
     fetch("https://www.swapi.tech/api/planets/")
@@ -32,8 +32,8 @@ export const Planets = (props) => {
 
   return (
     <>
-      {Planets.results?.length > 0 &&
-        Planets.results.map((planet, index) => {
+      {planets.results?.length > 0 &&
+        planets.results.map((planet, index) => {
           return (
             <FormatoCardPlanet
             key={index}
