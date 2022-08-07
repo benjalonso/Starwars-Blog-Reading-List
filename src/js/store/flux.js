@@ -41,7 +41,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         // console.log(fav[0].name)
         // console.log(getStore().favorite)
         if (getStore().favorite.includes(fav[0])) {
-          alert("Ya está en favoritos")
+          alert("Ya está en favoritos!!")
         } else {
 
           setStore({
