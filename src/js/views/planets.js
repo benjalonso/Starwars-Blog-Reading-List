@@ -5,7 +5,7 @@ import FormatoCardPlanet from "../FormatoCardPlanets";
 
 export const Planets = (props) => {
   const [planets, setPlanets] = useState({});
-
+console.log(planets)
   const fetchPlanets = () => {
     fetch("https://www.swapi.tech/api/planets/")
       .then((response) => response.json())
@@ -24,7 +24,7 @@ export const Planets = (props) => {
          
         });
       })
-      .catch((error) => console.log("Error en la solicitud de datos"));
+      .catch((error) => console.log("Error en la solicitud de planetas"));
   };
   useEffect(() => {
     fetchPlanets();

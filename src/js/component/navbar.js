@@ -1,6 +1,7 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
+import { TiDelete } from "react-icons/ti";
 
 export const Navbar = () => {
   const { store, actions } = useContext(Context);
@@ -41,10 +42,15 @@ export const Navbar = () => {
                     className="dropdown-menu"
                     aria-labelledby="navbarDropdown"
                   >
-                    {
-            store.favorite.map((name, index) => (
-              <li key={index}  deleteFromCart={actions.deleteFromCart} name={name} />
-            ))}
+                    {store.favorite.map((favorite, index) => (
+                      <li key={index} href={favorite.url} name={favorite.name} 
+                    
+                      >
+                        {favorite.name}
+                        <button type="button" class="btn btn-outline-danger" onClick={() => actions.deleteFromFavorite(index)}> <TiDelete/></button>
+                       
+                      </li>
+                    ))}
                   </ul>
                 </li>
               </ul>

@@ -5,27 +5,24 @@ import { Context } from "../store/appContext";
 
 // import { Pagination } from "../component/Pagination";
 export const Characters = () => {
-
-	const [characters, setCharacters] = useState([]);
-	const { store, actions } = useContext(Context);
-
-	actions.fetchCharacters()
+  const { store, actions } = useContext(Context);
 
   useEffect(() => {
     actions.fetchCharacters();
   }, []);
-	
-	return (
-<>
-      {characters.results?.length > 0 &&
-        characters.results.map((character, index) => {
+  // console.log(store.characters)
+  return (
+    <>
+      {store.characters.results?.length > 0 &&
+        store.characters.results.map((character, index) => {
+          // console.log(character)
           return (
             <FormatoCardCharacters
-            key={index}
+              key={index}
               name={character.name}
               index={index}
-              info={character?.info?.result?.properties}
-			  favorite={store.objectSw}
+              info={character?.info?.results?.properties}
+              favorite={character}
               img={
                 "https://p4.wallpaperbetter.com/wallpaper/81/410/454/star-wars-r2d2-video-games-star-wars-hd-art-wallpaper-preview.jpg"
               }
@@ -33,8 +30,5 @@ export const Characters = () => {
           );
         })}
     </>
-
-	);
-	
+  );
 };
-

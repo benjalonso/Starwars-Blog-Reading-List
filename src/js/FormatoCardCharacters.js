@@ -1,7 +1,6 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import { MdFavorite } from "react-icons/md";
 import { Context } from "./store/appContext";
-
 
 const FormatoCardCharacters = ({ index, img, name, info, favorite }) => {
   const { store, actions } = useContext(Context);
@@ -13,10 +12,10 @@ const FormatoCardCharacters = ({ index, img, name, info, favorite }) => {
           <img src={img} />
           <div className="card-body border-top border-4 border-secondary p-0 ">
             <h4 className="p-1 text-center" id="bodycard">
-              {name} 
-              <MdFavorite 
-              onClick={() => actions.addToFavorite({favorite})}
-              />
+              {name}
+              <button type="button" class="btn btn-outline-danger">
+                <MdFavorite onClick={() => actions.addToFavorite([favorite])} />
+              </button>
             </h4>
             <p className="card-text p-1 fs-4" id="bodytext">
               {/* La linea de abajo se lee como: Si INFO es distinto de undefined y null */}

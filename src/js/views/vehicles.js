@@ -24,7 +24,7 @@ export const Vehicles = (props) => {
          
         });
       })
-      .catch((error) => console.log("Error en la solicitud de datos"));
+      .catch((error) => console.log("Error en la solicitud de vehiculos"));
   };
   useEffect(() => {
     fetchVehicles();
