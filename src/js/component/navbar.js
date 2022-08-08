@@ -26,7 +26,6 @@ export const Navbar = () => {
                 <li className="nav-item btn-group dropstart">
                   <a
                     className="nav-link dropdown-toggle btn-warning"
-                    href="#"
                     id="navbarDropdown"
                     role="button"
                     data-bs-toggle="dropdown"
@@ -34,21 +33,28 @@ export const Navbar = () => {
                   >
                     Dropdown
                     <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                      0
+                      {store.favorite.length}
                     </span>
-                    <span class="visually-hidden">unread messages</span>
                   </a>
                   <ul
-                    className="dropdown-menu"
-                    aria-labelledby="navbarDropdown"
+                    class="dropdown-menu"
+                    // aria-labelledby="navbarDropdownMenuLink"
                   >
                     {store.favorite.map((favorite, index) => (
-                      <li key={index} href={favorite.url} name={favorite.name} 
-                    
-                      >
-                        {favorite.name}
-                        <button type="button" class="btn btn-outline-danger" onClick={() => actions.deleteFromFavorite(index)}> <TiDelete/></button>
-                       
+                      <li className="dropdown-item" key={index} href={favorite.url} >
+                        <a className="ms-2 d-flex justify-content-between">
+                          {favorite}
+                          <button
+                            type="button"
+                            class="btn btn-outline-danger border border-0 rounded-circle"
+                            onClick={() =>
+                              actions.deleteFromFavorite(favorite)
+                            }
+                          >
+                            {" "}
+                            <TiDelete />
+                          </button>
+                        </a>
                       </li>
                     ))}
                   </ul>

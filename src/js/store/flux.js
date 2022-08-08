@@ -1,11 +1,9 @@
-import { useParams } from "react-router";
+import swal from "sweetalert";
 
 const getState = ({ getStore, getActions, setStore }) => {
   return {
     store: {
-      apiUrl: "https://www.swapi.tech/api/",
       favorite: [],
-      idItems: null,
       planets: [],
       vehicles: [],
       characters: [],
@@ -28,46 +26,70 @@ const getState = ({ getStore, getActions, setStore }) => {
               const response = await fetch(url);
               const info = await response.json();
               data.results[index].info = info;
-                    setStore({characters: data});
-                    // console.log(data)
-              // setStore({characters: data})
-              // getStore().characters =  data.result.uid;
-              // getStore().characters =  data;
+              setStore({ characters: data });
             });
           })
           .catch((error) => console.log("Error en la solicitud de personajes"));
       },
-      addToFavorite: (fav) => {
-        // console.log(fav[0].name)
-        // console.log(getStore().favorite)
-        if (getStore().favorite.includes(fav[0])) {
-          alert("Ya está en favoritos!!")
-        } else {
+      fetchVehicles: () => {
+        fetch("https://www.swapi.tech/api/vehicles/")
+          .then((response) => response.json())
+          .then((data) => {
+            return data;
+          })
+          .then(async (data) => {
+            data.results.forEach(async (vehicle, index) => {
+              // console.log(vehicle.url);
+              const { url } = vehicle;
 
-          setStore({
-            favorite: getStore().favorite.concat(fav),
-          });
-          // getActions().addTolocalStorage();
-        }
+              const response = await fetch(url);
+              const info = await response.json();
+              data.results[index].info = info;
+              setStore({ vehicles: data });
+            });
+          })
+          .catch((error) => console.log("Error en la solicitud de vehiculos"));
       },
-      addToFavorite2: (fav) => {
-        console.log(fav.result?.uid)
+      fetchPlanets: () => {
+        fetch("https://www.swapi.tech/api/planets/")
+          .then((response) => response.json())
+          .then((data) => {
+            return data;
+          })
+          .then(async (data) => {
+            data.results.forEach(async (planet, index) => {
+              // console.log(planet.url);
+              const { url } = planet;
+              const response = await fetch(url);
+              const info = await response.json();
+              data.results[index].info = info;
+              setStore({ planets: data });
+            });
+          })
+          .catch((error) => console.log("Error en la solicitud de planetas"));
+      },
+      addToFavorite: (fav) => {
+        // console.log(getStore().favorite)
+        // console.log(getStore().favorite)
         if (getStore().favorite.includes(fav)) {
-          setStore({
-            favorite: getStore().favorite.concat(fav),
+          swal({
+            title: "Ya se ha añadido a favoritos",
           });
         } else {
           setStore({
             favorite: getStore().favorite.concat(fav),
           });
-          // getActions().addTolocalStorage();
+          getActions().addTolocalStorage();
         }
       },
       deleteFromFavorite: (fav) => {
         setStore({
-          favorite: getStore().favorite.filter((item) => item.index !== fav),
+          favorite: getStore().favorite.filter((item) => item !== fav),
         });
-        // getActions().addTolocalStorage();
+        getActions().addTolocalStorage();
+      },
+      addTolocalStorage: () => {
+        localStorage.setItem("lista", JSON.stringify(getStore().favorite));
       },
     },
   };

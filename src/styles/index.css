@@ -4,9 +4,8 @@
     margin: auto 0;
     letter-spacing: 0.2px;
     background-color: #0a0a0a;
-    background-image: url(https://static-mh.content.disney.io/starwars/assets/footer/vader_2-86e8fdb4e26d.jpg);
-    background-position: center top;
-    background-repeat: no-repeat;
+    background-image: url("https://fondosmil.com/fondo/5450.jpg");
+    background-size: cover;
 }
 
 p{
@@ -53,17 +52,14 @@ p{
 
 }
 
-.benja{
+/* .benja{
     color: rgb(236, 236, 245);
     margin-right: 10px;
 }
 .anye{
     color: rgb(236, 236, 245);
     margin-right: 10px;
-}
-
-
-
+} */
 
 .logoNavBar {
     width: 15rem;
@@ -78,7 +74,8 @@ p{
 }
 
 .navBar2 {
-   background: #0a0a0a;
+    background: linear-gradient(to right, #000000, #313131);
+
    
 }
 .linkToView{
@@ -86,10 +83,7 @@ p{
     text-decoration: none;
 }
 /* Sección componente HOME */
-.home {
-    background: gray;
-    
-}
+
 .carouselContainer{
     width: 100%;
     background-image: url("https://fondosmil.com/fondo/5450.jpg");
@@ -97,4 +91,11 @@ p{
 }
 .carouselContent{
     width: 900px;
+}
+.swal-overlay {
+    background-color: rgba(223, 186, 22, 0.377);
+  }
+.fondoCuerpo{
+    background: linear-gradient(to right, #000000, #313131);
+    margin: 0;
 }
