@@ -1,6 +1,5 @@
 import React, { useEffect, useContext } from "react";
 import FormatoCardCharacters from "../FormatoCardCharacters";
-import "../../styles/characters.css";
 import { Context } from "../store/appContext";
 
 // import { Pagination } from "../component/Pagination";

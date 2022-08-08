@@ -1,5 +1,4 @@
-
-.footer{
+.footer {
     width: 100%;
     margin: auto 0;
     letter-spacing: 0.2px;
@@ -8,41 +7,44 @@
     background-size: cover;
 }
 
-p{
-  
+p {
+
     color: rgb(229, 229, 238);
 }
-.social-links{
+
+.social-links {
     text-align: center;
     margin-top: 10px;
     justify-content: center;
     font-size: 30px;
     border-spacing: 100px;
     display: inline-flex;
-   
+
 
 }
 
-
-.facebook{
-   color: rgb(236, 236, 245);
-   margin-right: 10px;
-}
-.instagram{
+.facebook {
     color: rgb(236, 236, 245);
     margin-right: 10px;
 }
 
-.twitter{
+.instagram {
     color: rgb(236, 236, 245);
     margin-right: 10px;
 }
-.youtube{
-    color: rgb(236, 236, 245);;
+
+.twitter {
+    color: rgb(236, 236, 245);
+    margin-right: 10px;
+}
+
+.youtube {
+    color: rgb(236, 236, 245);
+    ;
 }
 
 
-.container-1{
+.container-1 {
     text-align: center;
     margin-top: 10px;
     justify-content: center;
@@ -51,15 +53,6 @@ p{
     display: inline-flex;
 
 }
-
-/* .benja{
-    color: rgb(236, 236, 245);
-    margin-right: 10px;
-}
-.anye{
-    color: rgb(236, 236, 245);
-    margin-right: 10px;
-} */
 
 .logoNavBar {
     width: 15rem;
@@ -76,26 +69,30 @@ p{
 .navBar2 {
     background: linear-gradient(to right, #000000, #313131);
 
-   
+
 }
-.linkToView{
+
+.linkToView {
     color: white;
     text-decoration: none;
 }
-/* Sección componente HOME */
 
-.carouselContainer{
+/* Sección componente HOME */
+.carouselContainer {
     width: 100%;
     background-image: url("https://fondosmil.com/fondo/5450.jpg");
 
 }
-.carouselContent{
+
+.carouselContent {
     width: 900px;
 }
+
 .swal-overlay {
     background-color: rgba(223, 186, 22, 0.377);
-  }
-.fondoCuerpo{
+}
+
+.fondoCuerpo {
     background: linear-gradient(to right, #000000, #313131);
     margin: 0;
 }

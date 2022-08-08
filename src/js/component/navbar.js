@@ -37,16 +37,16 @@ export const Navbar = () => {
                     </span>
                   </a>
                   <ul
-                    class="dropdown-menu"
-                    // aria-labelledby="navbarDropdownMenuLink"
+                    className="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
                   >
                     {store.favorite.map((favorite, index) => (
-                      <li className="dropdown-item" key={index} href={favorite.url} >
+                      <li className="dropdown-item bg-dark" key={index} href={favorite.url} >
                         <a className="ms-2 d-flex justify-content-between">
                           {favorite}
                           <button
                             type="button"
-                            class="btn btn-outline-danger border border-0 rounded-circle"
+                            className="btn btn-outline-danger border border-0 rounded-circle"
                             onClick={() =>
                               actions.deleteFromFavorite(favorite)
                             }

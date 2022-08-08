@@ -58,37 +58,6 @@ export const Footer = () => (
         </a>
       </div>
     </div>
-    <div className="container-1">
-      <div>
-        <a
-          className="benja"
-          href="https://github.com/benjalonso"
-          title="benjamin"
-        >
-          {" "}
-          <i className="fa-brands fa-github"></i>
-        </a>
-      </div>
-      <div>
-        <a
-          className="anye"
-          href="https://github.com/AnyelinaParedes?tab=repositories"
-          title="anye"
-        >
-          {" "}
-          <i className="fa-brands fa-github"></i>
-        </a>
-      </div>
-      <div>
-        <a
-          className="Manuel"
-          href="https://github.com/Attackama-Bwoy"
-          title="manuel"
-        >
-          {" "}
-          <i className="fa-brands fa-github"></i>
-        </a>
-      </div>
-    </div>
+ 
   </div>
 );
