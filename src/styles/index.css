@@ -95,4 +95,9 @@ p {
 .fondoCuerpo {
     background: linear-gradient(to right, #000000, #313131);
     margin: 0;
+    min-height:60vh;
+}
+.spinner{
+    /* margin-top: 500px; */
+    min-height:max-content;
 }

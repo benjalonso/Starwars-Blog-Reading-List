@@ -16,7 +16,7 @@ const FormatoCardPlanet = ({ index, img, name, info, favorite }) => {
               type="button"
               className="btn btn-outline-danger border border-0 rounded-circle float-end"
             >
-              <MdFavorite onClick={() => actions.addToFavorite([favorite])} />
+              <MdFavorite onClick={() => actions.addToFavorite(favorite.name)} />
             </button>
           </h4>
           <p className="card-text p-1 fs-4" id="bodytext">
