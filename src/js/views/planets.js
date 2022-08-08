@@ -11,8 +11,8 @@ export const Planets = () => {
   }, []);
 
   return (
-    <>
-      {store.planets.results?.length > 0 &&
+    <div className="fondoCuerpo container-fluid row">
+      {store.planets.results?.length > 0 ? (
         store.planets.results.map((planet, index) => {
           return (
             <FormatoCardPlanet
@@ -26,7 +26,12 @@ export const Planets = () => {
               }
             />
           );
-        })}
-    </>
+        })
+      ) : (
+        <div className="spinner-border text-warning mx-auto my-5" role="status">
+          <span className="visually-hidden">Loading...</span>
+        </div>
+      )}
+    </div>
   );
 };

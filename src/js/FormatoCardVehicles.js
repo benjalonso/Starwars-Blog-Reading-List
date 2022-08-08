@@ -7,7 +7,7 @@ const FormatoCardVehicles = ({ index, img, name, info, favorite }) => {
 
   return (
     <div key={index} className="row rounded">
-      <div className="col-sm-12 col-md-6 col-lg-4 g-4">
+      <div className="col-sm-12 col-md-6 col-lg-3 g-4">
         <div className="card bg-dark bg-gradient rounded text-light">
           <img src={img} />
           <div className="card-body border-top border-4 border-secondary p-0 ">
